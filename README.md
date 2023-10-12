@@ -49,7 +49,7 @@ Visual Studia Code, React.js and Redux.js.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Live Demo [Link](https://cdn.shopify.com/s/files/1/0620/8503/8286/files/Coming_soon_gif_2048x2048.gif?v=1683026148)
+- Live Demo [Link](https://metrics-webapp-git-styling-uzair-manzoor.vercel.app/)
 <!--
 ### 🚀 Presentation <a name="presentation"></a>
 
