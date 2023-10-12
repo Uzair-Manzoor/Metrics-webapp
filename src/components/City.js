@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import { FaAngleLeft } from 'react-icons/fa6';
 import { API_BASE_URL, API_KEY } from '../api';
 import { setCity } from '../redux/city/citySlice';
 
@@ -38,53 +39,58 @@ const City = () => {
 
   const renderContent = () => {
     if (loading) {
-      return <p>Loading...</p>;
+      return <p className="loading">Loading...</p>;
     }
     if (error) {
       return (
-        <>
+        <div className="error">
           <p>Error fetching data. Please try again.</p>
           <button type="button" onClick={retryFetch}>Retry</button>
-        </>
+        </div>
       );
     }
     const { current } = city;
     return (
       <div>
-        <Link to={`/${selectedState}`}>Back</Link>
-        <h2>{`${selectedCity} air pollution details`}</h2>
-        <article className="details">
-          <div>
-            <h3>Weather Details</h3>
-            <p>
-              Temperature:
-              {current.weather.tp}
-              °C
-            </p>
-            <p>
-              Pressure:
-              {current.weather.pr}
-              {' '}
-              hPa
-            </p>
-            <p>
-              Humidity:
-              {current.weather.hu}
-              %
-            </p>
-          </div>
-          <div>
-            <h3>Pollution Details</h3>
-            <p>
-              Air Quality Index (AQI):
-              {current.pollution.aqius}
-            </p>
-            <p>
-              Main Pollutant:
-              {current.pollution.mainus}
-            </p>
-          </div>
-        </article>
+        <nav className="navbar flex">
+          <Link to={`/${selectedState}`} className="back">
+            <FaAngleLeft className="arrow-left" />
+          </Link>
+          <h2>{`${selectedCity} city`}</h2>
+        </nav>
+        <p className="details-title">Weathe and air pollution details</p>
+        <ul className="details">
+          <li className="title">
+            Weather Details
+          </li>
+          <li>
+            <span>Temperature</span>
+            {current.weather.tp}
+            °C
+          </li>
+          <li>
+            <span>Pressure</span>
+            {current.weather.pr}
+            {' '}
+            hPa
+          </li>
+          <li>
+            <span>Humidity</span>
+            {current.weather.hu}
+            %
+          </li>
+          <li className="title">
+            Pollution Details
+          </li>
+          <li>
+            <span>Air Quality Index (AQI)</span>
+            {current.pollution.aqius}
+          </li>
+          <li>
+            <span>Main Pollutant</span>
+            {current.pollution.mainus}
+          </li>
+        </ul>
       </div>
     );
   };
