@@ -25,6 +25,8 @@
 
 **[Matrics Webapp]** is a pollution metrics dashboard for Canadian cities and states. It allows users to explore air quality and weather data for various regions within Canada. Users can navigate through Canadian states, view a list of cities, and access detailed pollution and weather information for each city. The app also features a search functionality to help users find specific states and cities of interest. It provides real-time data and helps users make informed decisions based on air quality and weather conditions in different parts of Canada.
 
+![image](src/InCollage_20231013_021716248.jpg)
+
 ## 🛠 Built With <a name="built-with"></a>
 Visual Studia Code, React.js and Redux.js.
 
