@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaArrowRight } from 'react-icons/fa6';
 import { API_BASE_URL, API_KEY } from '../api';
 import Search from './Search';
 
@@ -58,8 +59,9 @@ const States = () => {
       <ul className="items">
         {filteredStates.map((state) => (
           <li key={state.state} className="flex">
-            <Link to={`/${state.state}`} className="item-link">
-              {state.state}
+            <Link to={`/${state.state}`} className="item-link flex">
+              <span>{state.state}</span>
+              <FaArrowRight className="arrow-right" />
             </Link>
           </li>
         ))}
