@@ -1,13 +1,18 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Gill+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  color: #fcd8d8;
+  font-family: 'Gill Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #a31050c0;
+  width: 100vw;
+  min-width: 375px;
+  min-height: 100vh;
 }
